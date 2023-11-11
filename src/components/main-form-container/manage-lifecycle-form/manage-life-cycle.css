@@ -1,0 +1,13 @@
+.manage-form-container {
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 700px;
+}
+
+.manage-form-container > .form-group {
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 20px;
+	border: 1px solid #dedede;
+	margin: 20px;
+}

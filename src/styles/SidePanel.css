@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Monofett&family=Poppins&family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-.integrationitem{
-    display: flex;
-    height: 35px;
- align-items: center;
- margin-left: 10px;
- border-bottom: 1px solid rgb(208, 206, 206) ;
+@import url("https://fonts.googleapis.com/css2?family=Monofett&family=Poppins&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+.integrationitem {
+	display: flex;
+	height: 35px;
+	align-items: center;
+	margin-left: 10px;
+	border-bottom: 1px solid #dedede;
 }
-#integrationheading{
-    font-family: 'Monofett', monospace;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 24px;
-    margin:10px;
+#integrationheading {
+	font-family: "Monofett", monospace;
+	font-family: "Poppins", sans-serif;
+	font-family: "Varela Round", sans-serif;
+	font-size: 24px;
+	margin: 10px;
 }
-#integrationtext{
-    margin-left: 10px;
-    font-family: 'Roboto', sans-serif;
-    
-
+#integrationtext {
+	margin-left: 10px;
+	font-family: "Roboto", sans-serif;
 }
-#integrationimg{
-    margin-left:5px;
+#integrationimg {
+	margin-left: 5px;
 }
-.sidepanel{
-    width: 15%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    
+.sidepanel {
+	width: 20%;
+	max-width: 400px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border: 1px solid #dedede;
 }
-.searchbar{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+.searchbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #dedede;
 }
-.searchbar img{
-    margin-right: 10px;
+.searchbar img {
+	margin-right: 10px;
 }

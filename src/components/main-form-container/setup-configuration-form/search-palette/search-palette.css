@@ -1,0 +1,28 @@
+.search-palette {
+	width: 40%;
+	max-width: 500px;
+	border-left: 1px solid #dce2eb;
+	padding: 20px;
+}
+
+.search-palette > ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.search-palette > ul > li {
+	padding: 10px;
+	border-bottom: 1px solid #dedede;
+	font-family: "Roboto", "sans-serif";
+}
+
+.search-palette > ul > li > label {
+	cursor: pointer;
+	width: 100%;
+}
+
+.search-palette input[type="checkbox"] {
+	margin-right: 10px;
+}

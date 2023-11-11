@@ -1,13 +1,14 @@
 import Navbar from "./components/Navbar";
 import "./App.css";
-import SidePanel from "./components/SidePanel";
+import PlatformSetupForm from "./components/main-form-container/platform-setup-form/PlatformSetupForm";
+import MainFormContainer from "./components/main-form-container/MainFormContainer";
 import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar />
-      <SidePanel /> */}
+			<MainFormContainer  /> */}
       <Dashboard />
     </div>
   );
