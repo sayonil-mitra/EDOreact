@@ -1,0 +1,29 @@
+.dashboard-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.316);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.dashboard-modal {
+  top: 124px;
+  left: 202px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 1036px;
+  height: 744px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 0;
+}
+
+.dashboard-modal-left-chart,
+.dashboard-modal-right-chart-suggestions {
+  background-color: aliceblue;
+  padding: 16px;
+  width: 48%;
+}

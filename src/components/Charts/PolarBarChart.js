@@ -1,0 +1,41 @@
+import ReactEcharts from "echarts-for-react";
+
+function PolarBarChart() {
+  const option = {
+    title: [
+      {
+        text: "Tangential Polar Bar",
+        textStyle: {
+          color: "#26282C",
+          fontWeight: "normal",
+          fontSize: 14,
+        },
+      },
+    ],
+    polar: {
+      radius: [30, "60%"],
+    },
+    angleAxis: {
+      max: 4,
+      startAngle: 75,
+    },
+    radiusAxis: {
+      type: "category",
+      data: ["a", "b", "c", "d"],
+    },
+    tooltip: {},
+    series: {
+      type: "bar",
+      data: [2, 1.2, 2.4, 3.6],
+      coordinateSystem: "polar",
+      label: {
+        show: true,
+        position: "middle",
+        formatter: "{b}: {c}",
+      },
+    },
+  };
+  return <ReactEcharts option={option} />;
+}
+
+export default PolarBarChart;

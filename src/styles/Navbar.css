@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Monofett&family=Poppins&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.Navbar {
+  background: #26282c;
+  width: 100vw;
+  height: 5%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:8px;
+  padding-left: 10px;
+}
+.nav-left{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 100%;
+}
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+  
+}
+.navitem{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Monofett', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.navitemselect{
+background-color: white;
+color: black;
+border-radius: 5px;
+padding: 5px;
+}
+select{
+  background-color: black;
+  color: white;
+  height: 20px;
+}
+.logotext{
+  font-family: 'Monofett', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 24px;
+}
+.username{
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
+}
