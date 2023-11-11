@@ -8,11 +8,17 @@ import WaterfallChart from "./Charts/WaterfallChart";
 import HorizontalPieCharts from "./Charts/HorizontalPieCharts";
 import PolarBarChart from "./Charts/PolarBarChart";
 import { useState } from "react";
+import DashboardModal from "./DashboardModal";
 
 function Dashboard() {
+  // set display for dashboard modal
   const [modalDisplay, setModalDisplay] = useState(false);
-  function displayModal() {
+  // set which graph will be displayd in modal
+  const [dashboardModalGraph, setDashboardModalGraph] = useState(0);
+  // function to toggle modal
+  function displayModal(chart) {
     setModalDisplay(true);
+    setDashboardModalGraph(chart);
   }
   return (
     <div className="Dashboard">
@@ -22,41 +28,60 @@ function Dashboard() {
       <div className="dashboard-top-row">
         {/* top row has 3 columns */}
         <div className="dashboard-top-left-column">
-          <div className="dashboard-top-left-graph-1" onClick={displayModal}>
+          <div
+            className="dashboard-top-left-graph-1"
+            onClick={() => displayModal("BasicLineChart")}
+          >
             <BasicLineChart />
           </div>
-          <div className="dashboard-top-left-graph-2" onClick={displayModal}>
+          <div
+            className="dashboard-top-left-graph-2"
+            onClick={() => displayModal("GradientStackedAreaChart")}
+          >
             <GradientStackedAreaChart />
           </div>
         </div>
-        <div className="dashboard-top-middle-column" onClick={displayModal}>
+        <div
+          className="dashboard-top-middle-column"
+          onClick={() => displayModal("PieChart")}
+        >
           <PieChart />
         </div>
         <div className="dashboard-top-right-column">
-          <div className="dashboard-top-right-graph-1" onClick={displayModal}>
+          <div
+            className="dashboard-top-right-graph-1"
+            onClick={() => displayModal("WaterfallChart")}
+          >
             <WaterfallChart />
           </div>
-          <div className="dashboard-top-right-graph-2" onClick={displayModal}>
+          <div
+            className="dashboard-top-right-graph-2"
+            onClick={() => displayModal("DoubleYAxisLineCharts")}
+          >
             <DoubleYAxisLineCharts />
           </div>
         </div>
       </div>
       <div className="dashboard-bottom-row">
         {/* bottom row has 2 columns */}
-        <div className="dashboard-bottom-left" onClick={displayModal}>
+        <div
+          className="dashboard-bottom-left"
+          onClick={() => displayModal("HorizontalPieCharts")}
+        >
           <HorizontalPieCharts />
         </div>
-        <div className="dashboard-bottom-right" onClick={displayModal}>
+        <div
+          className="dashboard-bottom-right"
+          onClick={() => displayModal("PolarBarChart")}
+        >
           <PolarBarChart />
         </div>
       </div>
       {modalDisplay && (
-        <div className="dashboard-modal-background">
-          <div className="dashboard-modal">
-            <div className="dashboard-modal-left-chart"></div>
-            <div className="dashboard-modal-right-chart-suggestions"></div>
-          </div>
-        </div>
+        <DashboardModal
+          dashboardModalGraph={dashboardModalGraph}
+          setModalDisplay={setModalDisplay}
+        />
       )}
     </div>
   );

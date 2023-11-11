@@ -76,7 +76,7 @@ function PieChart() {
       };
     }),
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts style={{ "min-height": "688px" }} option={option} />;
 }
 
 export default PieChart;
