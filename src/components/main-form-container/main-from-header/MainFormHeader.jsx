@@ -62,7 +62,7 @@ const MainFormHeader = ({ preForm, setSelectedForm }) => {
 						Manage lifecycle
 					</li>
 					<li className="list-item">
-						<button>Discrad</button>
+						<button>Discard</button>
 						<button
 							className="next-btn"
 							onClick={() => handleFormChange()}
