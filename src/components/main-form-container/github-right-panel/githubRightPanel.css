@@ -33,6 +33,10 @@
   margin-right: 5px;
   border-radius: 50%;
 }
+.git-repo-compatible img,
+.git-repo-compliance img {
+  margin: 10px 10px 10px 0;
+}
 .git-repo-issues {
   margin: 8px 0;
   display: flex;

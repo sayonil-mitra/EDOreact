@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Octokit } from "octokit";
 import "./githubRightPanel.css";
+import GitRepoLanguages from "../../Charts/GitRepoLanguages";
 // import images
 import star from "../../../images/star.svg";
 import eye from "../../../images/eye.svg";
@@ -11,7 +12,10 @@ import heartbeat from "../../../images/heartbeat.svg";
 import weights from "../../../images/weights.svg";
 import greenBug from "../../../images/Bug.svg";
 import redBug from "../../../images/Bug Antivirus Debugging.svg";
-import GitRepoLanguages from "../../Charts/GitRepoLanguages";
+import angular from "../../../images/Angular.svg";
+import devIcon from "../../../images/Devicon.svg";
+import isoImg from "../../../images/download 1.png";
+import w3cImg from "../../../images/w3c-logo-11609381742g5r3kjtsjv 1.png";
 
 function GithubRightPanel() {
   const [gitHubApiResponse, setGitHubApiResponse] = useState([]);
@@ -24,7 +28,7 @@ function GithubRightPanel() {
   const [commits, setCommits] = useState(0);
 
   // github info
-  const auth_token = "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";
+  const auth_token = "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";
   const repo_owner = "sayonil-mitra";
   const repo_name = "EDOreact";
   const apiConfig = {
@@ -160,9 +164,11 @@ function GithubRightPanel() {
       </div>
       <div className="git-repo-compatible">
         <b>Compatible with</b> <br />
+        <img src={angular} /> <img src={devIcon} />
       </div>
       <div className="git-repo-compliance">
         <b>Compliance</b> <br />
+        <img src={isoImg} /> <img src={w3cImg} />
       </div>
       <div className="git-repo-issues">
         <div>
