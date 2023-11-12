@@ -11,7 +11,7 @@ const PlatformSetupForm = () => {
 	]);
 	const [credType, setCredType] = useState("USERNAME_PASSWORD");
 	const [formData, setFormData] = useState({});
-	return (
+	return (<>
 		<form className="platform-setup-form">
 			<div className="input-container">
 				<label htmlFor="integration-name" className="input-lable">
@@ -160,6 +160,7 @@ const PlatformSetupForm = () => {
 				</>
 			)}
 		</form>
+		</>
 	);
 };
 
