@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   // show or hide dashboard/main forms container
-  const [dashboardDisplay, setDashboardDisplay] = useState(false);
+  const [dashboardDisplay, setDashboardDisplay] = useState(true);
   return (
     <div className="App">
       <Navbar userName="Jackie.c" setDashboardDisplay={setDashboardDisplay} />
