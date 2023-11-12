@@ -3,12 +3,16 @@ import PlatformSetupForm from "./platform-setup-form/PlatformSetupForm";
 import "./main-form-container.css";
 import SetupConfigurationForm from "./setup-configuration-form/SetupConfigurationForm";
 import ManageLifeCycleForm from "./manage-lifecycle-form/ManageLifeCycleForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SidePanel from "../SidePanel";
 import GithubRightPanel from "./github-right-panel/githubRightPanel";
+import PlatformSetUp from "./platform-set-up/PlatformSetUp";
 
 const MainFormContainer = () => {
 	const [selectedForm, setSelectedForm] = useState("PLATFORM_SETUP");
+	const [gitUrl, setGitUrl] = useState("");
+  const [gitToken, setGitToken] = useState("");
+
 	return (
 		<main className="main-container">
 			<SidePanel />
@@ -19,13 +23,14 @@ const MainFormContainer = () => {
 				/>
 				<section className="forms-container">
 					{selectedForm === "PLATFORM_SETUP" ? (
-						<PlatformSetupForm />
+						// <PlatformSetupForm />
+						<PlatformSetUp setGitUrl={setGitUrl} setGitToken={setGitToken}/>
 					) : selectedForm === "SETUP_CONFIGURATION" ? (
 						<SetupConfigurationForm />
 					) : (
 						<ManageLifeCycleForm />
 					)}
-					<GithubRightPanel/>
+					{(gitUrl!="" && gitToken!="") && <GithubRightPanel gitUrl={gitUrl} gitToken={gitToken}/>}
 				</section>
 			</section>
 		</main>
