@@ -5,6 +5,7 @@ import SetupConfigurationForm from "./setup-configuration-form/SetupConfiguratio
 import ManageLifeCycleForm from "./manage-lifecycle-form/ManageLifeCycleForm";
 import { useState } from "react";
 import SidePanel from "../SidePanel";
+import GithubRightPanel from "./github-right-panel/githubRightPanel";
 
 const MainFormContainer = () => {
 	const [selectedForm, setSelectedForm] = useState("PLATFORM_SETUP");
@@ -24,6 +25,7 @@ const MainFormContainer = () => {
 					) : (
 						<ManageLifeCycleForm />
 					)}
+					<GithubRightPanel/>
 				</section>
 			</section>
 		</main>
