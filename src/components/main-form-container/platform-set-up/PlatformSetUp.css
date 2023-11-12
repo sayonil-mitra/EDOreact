@@ -1,0 +1,45 @@
+.platform-set-up-container {
+  margin-top: 10px;
+  padding: 10px;
+  width: 60%;
+}
+.platform-set-up-details-1 {
+  display: flex;
+  width: 100%;
+}
+.platform-set-up-details-1-left {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.platform-set-up-details-1-left img {
+  display: inline-block;
+  margin: 10px 0;
+}
+.platform-set-up-details-1-right {
+  width: 80%;
+}
+.platform-set-up-container input,
+.platform-set-up-container textarea {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #6b768a1c;
+  margin: 10px 0;
+}
+.platform-set-up-container button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #6b768a1c;
+  margin: 10px 0;
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.3s ease-in-out;
+}
+.platform-set-up-container button:hover {
+  background-color: #6b768a4a;
+}

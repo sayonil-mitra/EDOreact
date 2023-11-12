@@ -2,7 +2,7 @@ import ReactEcharts from "echarts-for-react";
 import { useEffect, useState } from "react";
 import { Octokit } from "octokit";
 
-function GitRepoLanguages({ auth_token, repo_owner, repo_name, apiConfig }) {
+function GitRepoLanguages({ auth_token, apiConfig }) {
   // creating array for use in apache echarts compoments
   const [gitRepoLangArrForCharts, setgitRepoLangArrForCharts] = useState([]);
 
@@ -16,36 +16,41 @@ function GitRepoLanguages({ auth_token, repo_owner, repo_name, apiConfig }) {
     // get repo languageusage  info
     async function gitApiLangCall() {
       // api call
-      const repoLangRes = await octokit.request(
-        "GET /repos/{owner}/{repo}/languages",
-        apiConfig
-      );
+      try {
+        const repoLangRes = await octokit.request(
+          "GET /repos/{owner}/{repo}/languages",
+          apiConfig
+        );
 
-      // set up for iterating over response object
-      const repoLangResObj = new Object(repoLangRes.data);
-      let repoLangResArr = [];
-      let totalLangUsage = 0;
+        // set up for iterating over response object
+        const repoLangResObj = new Object(repoLangRes.data);
+        let repoLangResArr = [];
+        let totalLangUsage = 0;
 
-      // calculate total usage of all languages in git repo
-      for (const iterator in repoLangResObj) {
-        if (repoLangResObj.hasOwnProperty(iterator)) {
-          totalLangUsage += repoLangResObj[iterator];
+        // calculate total usage of all languages in git repo
+        for (const iterator in repoLangResObj) {
+          if (repoLangResObj.hasOwnProperty(iterator)) {
+            totalLangUsage += repoLangResObj[iterator];
+          }
         }
-      }
 
-      // create array suitable for use in echarts
-      for (const iterator in repoLangResObj) {
-        if (repoLangResObj.hasOwnProperty(iterator)) {
-          repoLangResArr.push({
-            name: iterator,
-            type: "bar",
-            stack: "total",
-            data: [repoLangResObj[iterator] / totalLangUsage],
-          });
+        // create array suitable for use in echarts
+        for (const iterator in repoLangResObj) {
+          if (repoLangResObj.hasOwnProperty(iterator)) {
+            repoLangResArr.push({
+              name: iterator,
+              type: "bar",
+              stack: "total",
+              data: [repoLangResObj[iterator] / totalLangUsage],
+            });
+          }
         }
+        setgitRepoLangArrForCharts(repoLangResArr);
+      } catch (error) {
+        console.log(error);
       }
-      setgitRepoLangArrForCharts(repoLangResArr);
     }
+
     gitApiLangCall();
   }, []);
 
