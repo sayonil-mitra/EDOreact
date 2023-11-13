@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
-function BasicLineChart() {
+function BasicLineChart({ size }) {
   const option = {
     title: {
       text: "Basic Line Chart",
@@ -25,7 +25,7 @@ function BasicLineChart() {
       },
     ],
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts option={option} opts={{ height: size }} />;
 }
 
 export default BasicLineChart;

@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
-function WaterfallChart() {
+function WaterfallChart({ size }) {
   const option = {
     title: {
       text: "Waterfall Chart",
@@ -64,7 +64,7 @@ function WaterfallChart() {
       },
     ],
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts option={option} opts={{ height: size }} />;
 }
 
 export default WaterfallChart;

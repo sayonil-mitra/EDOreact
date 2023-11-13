@@ -176,7 +176,7 @@ const PlatformSetupForm = () => {
 					<AnalyticParameters />
 				</div>
 			</div>
-			{credType === "USERNAME_PASSWORD" ? (
+			{/* {credType === "USERNAME_PASSWORD" ? (
 				<>
 					<div className="input-container">
 						<label htmlFor="username" className="input-lable">
@@ -218,7 +218,7 @@ const PlatformSetupForm = () => {
 						/>
 					</div>
 				</>
-			)}
+			)} */}
 </>
 	);
 };
