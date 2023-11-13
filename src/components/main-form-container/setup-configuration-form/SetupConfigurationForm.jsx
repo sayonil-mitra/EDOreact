@@ -1,6 +1,7 @@
 import SearchPalette from "./search-palette/SearchPalette";
 import SetupFormCard from "./setup-form-card/SetupFormCard";
 import { useState } from "react";
+import "./SetupConfigurationForm.css"
 
 const SetupConfigurationForm = () => {
 	const [selectedMethods, setSelectedMethods] = useState([]);
