@@ -14,9 +14,10 @@ function PlatformSetUp({ setGitUrl, setGitToken }) {
         </div>
         <div className="platform-set-up-details-1-right">
           Platform Name <br />
-          <input type="text" /> <br />
+          <input type="text" value="Big Query" /> <br />
           Platform Url <br />
-          <input type="text" /> <br />
+          <input type="text" value="https://cloud.google.com/bigquery/" />{" "}
+          <br />
           15 Total APIs found
         </div>
       </div>

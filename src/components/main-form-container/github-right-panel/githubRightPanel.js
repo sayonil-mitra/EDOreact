@@ -27,6 +27,9 @@ function GithubRightPanel({ gitUrl, gitToken }) {
   const [issues, setIssues] = useState(0);
   const [commits, setCommits] = useState(0);
 
+  // check status of git api call
+  const [apiResponseSuccess, setApiResSuccess] = useState(false);
+
   // extract user name and repo name form git repo url
   let tempArr = new String(gitUrl).split("/");
   if (tempArr.length >= 3) {
@@ -49,7 +52,7 @@ function GithubRightPanel({ gitUrl, gitToken }) {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [gitUrl]);
 
   async function gitApiCall() {
     try {
@@ -87,7 +90,9 @@ function GithubRightPanel({ gitUrl, gitToken }) {
         apiConfig
       );
       setCommits(commitsNum.data.length);
+      setApiResSuccess(true);
     } catch (error) {
+      setApiResSuccess(false);
       console.log(error);
     }
   }
@@ -123,82 +128,86 @@ function GithubRightPanel({ gitUrl, gitToken }) {
   }
 
   return (
-    <div className="github-right-panel">
-      <div className="git-repo-general-info">
-        <span>
-          <img src={book} /> README
-        </span>
-        <br />
-        <span>
-          <img src={weights} /> MIT license
-        </span>
-        <br />
-        <span>
-          <img src={heartbeat} /> Activity
-        </span>
-        <br />
-        <span>
-          <img src={star} /> <b>{repoStars}</b> stars
-        </span>
-        <br />
-        <span>
-          <img src={eye} /> <b>{repoSubs}</b> watching
-        </span>
-        <br />
-        <span>
-          <img src={gitfork} /> <b>{repoForks}</b> forks
-        </span>
-        <br />
-      </div>
-      <div className="git-repo-collab">
-        Collaborators <span>{gitHubApiResponse.length}</span> <br />
-        <div className="git-repo-collab-avatars">
-          {gitHubApiResponse.map((item) => {
-            return (
-              <>
-                <img src={item.avatar_url} />
-              </>
-            );
-          })}
+    <>
+      {apiResponseSuccess && (
+        <div className="github-right-panel">
+          <div className="git-repo-general-info">
+            <span>
+              <img src={book} /> README
+            </span>
+            <br />
+            <span>
+              <img src={weights} /> MIT license
+            </span>
+            <br />
+            <span>
+              <img src={heartbeat} /> Activity
+            </span>
+            <br />
+            <span>
+              <img src={star} /> <b>{repoStars}</b> stars
+            </span>
+            <br />
+            <span>
+              <img src={eye} /> <b>{repoSubs}</b> watching
+            </span>
+            <br />
+            <span>
+              <img src={gitfork} /> <b>{repoForks}</b> forks
+            </span>
+            <br />
+          </div>
+          <div className="git-repo-collab">
+            Collaborators <span>{gitHubApiResponse.length}</span> <br />
+            <div className="git-repo-collab-avatars">
+              {gitHubApiResponse.map((item) => {
+                return (
+                  <>
+                    <img src={item.avatar_url} />
+                  </>
+                );
+              })}
+            </div>
+          </div>
+          <div className="git-repo-languages">
+            <b>Languages</b>
+            <div>
+              <GitRepoLanguages gitToken={gitToken} apiConfig={apiConfig} />
+            </div>
+          </div>
+          <div className="git-repo-compatible">
+            <b>Compatible with</b> <br />
+            <img src={angular} /> <img src={devIcon} />
+          </div>
+          <div className="git-repo-compliance">
+            <b>Compliance</b> <br />
+            <img src={isoImg} /> <img src={w3cImg} />
+          </div>
+          <div className="git-repo-issues">
+            <div>
+              Created <br />
+              <b className="git-repo-issues-data">
+                {dateFormatter(repoCreateDate)}
+              </b>
+            </div>
+            <div>
+              Modified <br />
+              <b className="git-repo-issues-data">
+                {dateFormatter(repoUpdateDate)}
+              </b>
+            </div>
+            <div>
+              Bugs <br />
+              <b className="git-repo-issues-data">
+                <img src={greenBug} />
+                {commits} <img src={redBug} />
+                {issues}
+              </b>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="git-repo-languages">
-        <b>Languages</b>
-        <div>
-          <GitRepoLanguages gitToken={gitToken} apiConfig={apiConfig} />
-        </div>
-      </div>
-      <div className="git-repo-compatible">
-        <b>Compatible with</b> <br />
-        <img src={angular} /> <img src={devIcon} />
-      </div>
-      <div className="git-repo-compliance">
-        <b>Compliance</b> <br />
-        <img src={isoImg} /> <img src={w3cImg} />
-      </div>
-      <div className="git-repo-issues">
-        <div>
-          Created <br />
-          <b className="git-repo-issues-data">
-            {dateFormatter(repoCreateDate)}
-          </b>
-        </div>
-        <div>
-          Modified <br />
-          <b className="git-repo-issues-data">
-            {dateFormatter(repoUpdateDate)}
-          </b>
-        </div>
-        <div>
-          Bugs <br />
-          <b className="git-repo-issues-data">
-            <img src={greenBug} />
-            {commits} <img src={redBug} />
-            {issues}
-          </b>
-        </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
