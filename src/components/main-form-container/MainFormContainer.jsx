@@ -23,16 +23,32 @@ const MainFormContainer = () => {
 				/>
 				<section className="forms-container">
 					{selectedForm === "PLATFORM_SETUP" ? (
-						// <PlatformSetupForm />
+						<PlatformSetUp setGitUrl={setGitUrl} setGitToken={setGitToken}/>
+						
+					) : selectedForm === "SETUP_CONFIGURATION" ? (
+						<PlatformSetupForm />
+					) : (
+						<ManageLifeCycleForm />
+					)}
+					{(selectedForm == "PLATFORM_SETUP" && gitUrl!="" && gitToken!="") && <GithubRightPanel gitUrl={gitUrl} gitToken={gitToken}/>}
+				</section>
+			</section>
+			{/* <section className="main-form-container">
+				<MainFormHeader
+					preForm={selectedForm}
+					setSelectedForm={setSelectedForm}
+				/>
+				<section className="forms-container">
+					{selectedForm === "PLATFORM_SETUP" ? (
 						<PlatformSetUp setGitUrl={setGitUrl} setGitToken={setGitToken}/>
 					) : selectedForm === "SETUP_CONFIGURATION" ? (
 						<SetupConfigurationForm />
 					) : (
 						<ManageLifeCycleForm />
 					)}
-					{(gitUrl!="" && gitToken!="") && <GithubRightPanel gitUrl={gitUrl} gitToken={gitToken}/>}
+					{(selectedForm == "PLATFORM_SETUP" && gitUrl!="" && gitToken!="") && <GithubRightPanel gitUrl={gitUrl} gitToken={gitToken}/>}
 				</section>
-			</section>
+			</section> */}
 		</main>
 	);
 };

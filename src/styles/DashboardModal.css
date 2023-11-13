@@ -47,6 +47,19 @@
 .dashboard-modal-options span {
   width: 50%;
 }
+.dashboard-modal-right-chart-suggestions-buttons {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  margin-bottom: 5px;
+}
+.dashboard-modal-right-chart-suggestions-buttons button {
+  width: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #039;
+}
 .dashboard-modal-right-chart-suggestions-list {
   display: flex;
   flex-wrap: wrap;
@@ -71,24 +84,17 @@
 .dashboard-modal-right-chart-suggestions_search img {
   height: 80%;
 }
-.dashboard-modal-right-chart-suggestions-list > * {
-  width: 50%;
+.dashboard-modal-right-chart-suggestions-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .dashboard-modal-right-chart-suggestions-list > div {
-  height: 177px;
-  width: 219px;
+  width: 48%;
   text-align: center;
   padding: 8px 0;
 }
 
-.dashboard-modal-right-chart-suggestions-list > div > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  padding: 8px;
-  border: 1px solid #e0e8f8;
-}
 .dashboard-modal-close-button {
   position: relative;
   top: 110px;
@@ -99,4 +105,21 @@
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+}
+.dashboard-modal-right-alerts select {
+  width: 100%;
+  background-color: #6b768a0d;
+  border: none;
+  outline: none;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+.dashboard-modal-right-alerts-images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.dashboard-modal-right-alerts-images img {
+  width: 20%;
 }

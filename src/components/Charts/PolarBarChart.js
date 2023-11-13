@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
-function PolarBarChart() {
+function PolarBarChart({ size }) {
   const option = {
     title: [
       {
@@ -35,7 +35,7 @@ function PolarBarChart() {
       },
     },
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts option={option} opts={{ height: size }} />;
 }
 
 export default PolarBarChart;
