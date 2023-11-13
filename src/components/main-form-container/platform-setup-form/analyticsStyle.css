@@ -1,109 +1,105 @@
-.analyticsCardContainer{
-    overflow-y: scroll;
-    height: 90vh;
+.analyticsCardContainer {
+  overflow-y: scroll;
+  height: 90vh;
 }
 .heading {
-    margin: 10px;
+  margin: 10px;
 }
-.allCardsContainer{
-    margin-bottom: 3px;
+.allCardsContainer {
+  margin-bottom: 3px;
 }
 
 .cardContainer {
-    width: 90%;
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3%;
-    border-radius: 8px;
-    border: 1px solid #EAEAEA;
-    background: #FFF;
-    padding-left: 3%;
-    padding-top: 4%;
-    margin-bottom: 10px;
-
+  width: 90%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  padding-left: 3%;
+  padding-top: 4%;
+  margin-bottom: 10px;
 }
 
 .styleName {
-    color: var(--main-bulma, #000);
-    font-family: Acherus Grotesque;
-    height: 10%;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px;
-
+  color: var(--main-bulma, #000);
+  font-family: Acherus Grotesque;
+  height: 10%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
 }
 
 .styleContent {
-    color: var(--main-bulma, #000);
-    font-family: Acherus Grotesque;
-    height: 55%;
-    width: 95%;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 22px;
-    padding-top: 15px;
+  color: var(--main-bulma, #000);
+  font-family: Acherus Grotesque;
+  height: 40%;
+  width: 95%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  padding-top: 15px;
 }
 
 .creationMainContainer {
-    display: flex;
-    height: 25%;
-    width: 90%;
+  display: flex;
+  height: 25%;
+  width: 90%;
 }
 
 .creatednameContainer {
-    width: 50%;
-    color: var(--bg-text, #2C2C2C);
-    font-family: Acherus Grotesque;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    opacity: 0.9;
+  width: 50%;
+  color: var(--bg-text, #2c2c2c);
+  font-family: Acherus Grotesque;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  opacity: 0.9;
 }
 
 .creationHeading {
-    color: var(--bg-text, #2C2C2C);
-    font-family: Acherus Grotesque;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    margin-bottom: 3px;
-    opacity: 0.7;
-    /* 140% */
-
+  color: var(--bg-text, #2c2c2c);
+  font-family: Acherus Grotesque;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 3px;
+  opacity: 0.7;
+  /* 140% */
 }
 
 .creationName {
-
-    color: var(--bg-text, #2C2C2C);
-    font-family: Acherus Grotesque;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    /* 150% */
+  color: var(--bg-text, #2c2c2c);
+  font-family: Acherus Grotesque;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 150% */
 }
 
 .creationCompany {
-    color: var(--bg-text, #2C2C2C);
-    font-family: Acherus Grotesque;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    /* 180% */
+  color: var(--bg-text, #2c2c2c);
+  font-family: Acherus Grotesque;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 180% */
 }
 
 .createdtimeContainer {
-    width: 50%;
-    color: var(--bg-text, #2C2C2C);
-    font-family: Acherus Grotesque;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
+  width: 50%;
+  color: var(--bg-text, #2c2c2c);
+  font-family: Acherus Grotesque;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
 }
