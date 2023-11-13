@@ -1,32 +1,32 @@
 .analyticsQueriesCardContainer {
-    overflow-y: scroll;
-    height: 90vh;
+  overflow-y: scroll;
+  height: 90vh;
 }
 
 .headingAqs {
-    margin: 10px;
-    padding-left: 15px;
+  margin: 10px;
+  padding-left: 15px;
 }
 
 .allCardsContainer {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 .cardContainerAqs {
-    width: 100%;
-    height: 4vh;
-    display: flex;
-    align-items: center;
-    padding-left: 25px;
-    background: #FFF;
-    /* margin-bottom: 10px; */
-    overflow: hidden;
-    color: #2A333E;
-    font-family: Acherus Grotesque;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  background: #fff;
+  /* margin-bottom: 10px; */
+  overflow: hidden;
+  color: #2a333e;
+  font-family: Acherus Grotesque;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
 }
-.even-bg{
-    background-color: rgba(247, 247, 247, 1);
+.even-bg {
+  background-color: rgba(247, 247, 247, 1);
 }

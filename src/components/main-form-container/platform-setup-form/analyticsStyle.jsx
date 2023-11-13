@@ -1,62 +1,21 @@
+
 import React from "react";
 import "./analyticsStyle.css";
 
 const analyticStylesData = [
   {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
+    name: "Storage Queries",
+    content: "This set of queries are used fetch details related Storage",
     createdBy: "Sri Cherry Kotamreddy",
     company: "Gaian Solutions",
     createdOn: "11 Mar 2023, 9:34 am",
   },
   {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
+    name: "Storage Queries",
+    content: "This set of queries are used fetch details usage of services",
     createdBy: "Sri Cherry Kotamreddy",
     company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
-  },
-  {
-    name: "Analytics style name 1",
-    content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
-    createdBy: "Sri Cherry Kotamreddy",
-    company: "Gaian Solutions",
-    createdOn: "11 Mar 2023, 9:34 am",
+    createdOn: "11 Mar 2023, 10:05 am",
   }
   // Add more data items as needed
 ];

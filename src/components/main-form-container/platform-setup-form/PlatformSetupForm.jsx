@@ -165,11 +165,11 @@ const PlatformSetupForm = () => {
 	// 	</form>
 	// );
 	return (<>
-			<div style={{ display: 'flex'}}>
-				<div style={{ width: '32%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
+			<div style={{ width: '100%',display: 'flex'}}>
+				<div style={{width: '32%', borderRight:'1px solid #EAEAEA',height:'90vh'}}>
 					<AnalyticStyle />
 				</div>
-				<div style={{ width: '33%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
+				<div style={{ width: '34%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
 					<AnalyticQueries />
 				</div>
 				<div style={{ width: '34%' }}>
