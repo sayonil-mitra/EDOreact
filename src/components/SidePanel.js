@@ -117,6 +117,17 @@ const integrationsData = [
 ];
 
 export default function SidePanel({ setdisplayIntegration }) {
+  const [activeIntegration, setActiveIntegration] = useState(null);
+
+  const handleAccordionClick = (integrationId) => {
+    setdisplayIntegration(false);
+    setActiveIntegration(integrationId);
+  };
+
+  const handleSecAccordtionClick = (integrationId) =>{
+    setdisplayIntegration(true)
+    setActiveIntegration(integrationId);
+  }
   return (
     <>
       <div className="sidepanel">
@@ -132,13 +143,14 @@ export default function SidePanel({ setdisplayIntegration }) {
             />
           </div>
         </div>
+        
         <Accordion defaultActiveKey="0">
           {integrationsData.map((integration) => (
             <Accordion.Item
               key={integration.id}
               eventKey={integration.id.toString()}
             >
-              <Accordion.Header onClick={() => setdisplayIntegration(false)}>
+              <Accordion.Header onClick={() => handleAccordionClick(integration.id)}>
                 <div className="bqHeadingParent">
                   <div className="bqLogoParent">
                     <img id="bqLogo" src={integration.logo} />
@@ -147,11 +159,16 @@ export default function SidePanel({ setdisplayIntegration }) {
                     <p id="bqHeadingName">{integration.name}</p>
                   </div>
                   <div className="bqApisNumberParent">
-                    <div id="bqApisNumber">{integration.apis.length - 1}</div>
+                    <div id="bqApisNumber" style={{
+                        backgroundColor: activeIntegration === integration.id ? "#eee" : "#DFF7FF"
+                      }}>{integration.apis.length - 1}</div>
                   </div>
                 </div>
+                
               </Accordion.Header>
-              <Accordion.Body onClick={() => setdisplayIntegration(true)}>
+              
+        <hr className="my-hr-line"/>
+              <Accordion.Body onClick={() => handleSecAccordtionClick(integration.id)}>
                 {/* <div className="bqAllApis"> */}
                 {integration.apis.map((api, index) => (
                   <div className="bqLogsApiHeading" key={index}>
