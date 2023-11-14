@@ -1,0 +1,9 @@
+/* .integration-setup {
+  font-family: ;
+} */
+
+.integration-setup-form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
