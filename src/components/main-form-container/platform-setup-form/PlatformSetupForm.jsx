@@ -171,10 +171,12 @@ const PlatformSetupForm = () => {
 					<AnalyticStyle />
 				</div>
 				<div style={{ width: '33%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
-					<AnalyticQueries />
+				<AnalyticParameters />
+					
 				</div>
 				<div style={{ width: '34%' }}>
-					<AnalyticParameters />
+				<AnalyticQueries />
+						
 				</div>
 			</div>
 		</>

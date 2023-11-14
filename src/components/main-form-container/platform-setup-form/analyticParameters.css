@@ -1,22 +1,16 @@
-.thirdContainer{
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+.thirdContainer {
     display: flex;
     flex-direction: column;
 
 }
-.analyticsParametrsCardContainer1{
-    overflow-y: scroll;
-    height: 47vh;
-    border-bottom: 1px solid rgba(238, 238, 238, 1);
 
-}
-.analyticsParametrsCardContainer2{
+.analyticsParametrsCardContainer1 {
     overflow-y: scroll;
-    height: 43vh;
-}
-
-.headingAqsparametrs {
-    margin: 10px;
     padding-left: 15px;
+    width: 95%;
 }
 
 .allCardsContainerAqsparametrs {
@@ -42,6 +36,109 @@
     /* 142.857% */
 }
 
-.borderBottom {
-    border-bottom: 1px solid rgba(238, 238, 238, 1);
+/* Details of selected queries */
+.analyticsParametrsCardContainer2 {
+    overflow-y: scroll;
+    height: 38vh;
+    background: #FFF;
+    margin-left: 5%;
+    padding-left: 15px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    width: 95%;
+}
+
+.headingAqsparametrs {
+    margin-top: 10px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+.queryNameContainer{
+    margin-top: 20px!important;
+}
+
+.queryNameHeading {
+    margin-bottom: 6px !important;
+    color: #2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    opacity: 0.7;
+}
+
+.queryName {
+    color: #2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+.creationMainContainer {
+    display: flex;
+    height: 25%;
+    width: 90%;
+}
+
+.creatednameContainer {
+    width: 50%;
+    color:#2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    opacity: 0.9;
+}
+
+.creationHeading {
+    color: var(--bg-text, #2C2C2C);
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-bottom: 3px;
+    opacity: 0.7;
+}
+
+.creationName {
+    color:#2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 8px;
+}
+
+.creationCompany {
+    color: #2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 8px;
+}
+
+.createdtimeContainer {
+    width: 50%;
+    color: #2C2C2C;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+}
+.headingOuter{
+    padding-left: 20px;
+    padding-top: 12px;
 }
