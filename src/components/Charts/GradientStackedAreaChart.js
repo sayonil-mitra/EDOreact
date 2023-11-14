@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
-function GradientStackedAreaChart() {
+function GradientStackedAreaChart({ size }) {
   const option = {
     color: ["#80FFA5", "#00DDFF", "#37A2FF", "#FF0087", "#FFBF00"],
     title: {
@@ -175,7 +175,7 @@ function GradientStackedAreaChart() {
       },
     ],
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts option={option} opts={{ height: size, width: size }} />;
 }
 
 export default GradientStackedAreaChart;

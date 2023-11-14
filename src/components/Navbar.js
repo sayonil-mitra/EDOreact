@@ -2,9 +2,16 @@ import { useState } from "react";
 import "../styles/Navbar.css";
 import logo from "../images/logo.png";
 import profile from "../images/profile.png";
+import cogWheel from "../images/cogwheel.svg";
 
 function Navbar({ userName, setDashboardDisplay }) {
-  const [selectedItem, setItem] = useState(1);
+  const [navbarTitle, setNavbarTitle] = useState("Data Insights Hub");
+  function toggleScreens() {
+    setDashboardDisplay((dashboardDisplay) => !dashboardDisplay);
+    navbarTitle == "Data Insights Hub"
+      ? setNavbarTitle("Setup, Simulate & Synchronize")
+      : setNavbarTitle("Data Insights Hub");
+  }
   return (
     <div className="Navbar">
       <div className="nav-left">
@@ -12,36 +19,21 @@ function Navbar({ userName, setDashboardDisplay }) {
         <div
           className="navitem logotext"
           onClick={() => {
-            setDashboardDisplay(false);
-          }}
-        >
-          EDOaaS
-        </div>
-        <div
-          className={`navitem ${selectedItem == 1 ? "navitemselect" : ""}`}
-          id="1"
-          onClick={() => {
-            setItem(1);
-            setDashboardDisplay(false);
-          }}
-        >
-          Setup, Simulate & Sync
-        </div>
-        <div
-          className={`navitem ${selectedItem == 2 ? "navitemselect" : ""}`}
-          id="2"
-          onClick={() => {
-            setItem(2);
             setDashboardDisplay(true);
           }}
         >
-          Insights & Engagements
+          Snaplogic
         </div>
       </div>
-      <div className="nav-right" onClick={() => setDashboardDisplay(true)}>
+      <div className="nav-middle">{navbarTitle}</div>
+      <div className="nav-right">
         <h5 className="username">{userName}</h5>
         <img src={profile} />
-        <select className="nav-select "></select>
+        <img
+          src={cogWheel}
+          className="navbar-cogwheel"
+          onClick={toggleScreens}
+        ></img>
       </div>
     </div>
   );

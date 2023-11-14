@@ -1,61 +1,70 @@
 .main-form-header {
-	height: 40px;
-	border-bottom: 1px solid #eee;
-	padding: 0;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+  padding: 0;
 }
 
 .main-form-header > nav {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .main-form-header > nav > ul {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0;
-	margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .main-form-header > nav > ul > .list-item {
-	list-style: none;
-	padding: 0 20px;
-	cursor: pointer;
+  list-style: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.main-form-header > nav > ul > .list-item:first-child {
+  border-bottom: 3px solid #003399;
+}
+
+.main-form-header > nav > ul > .list-item:nth-child(2) {
+  margin-right: 550px;
+  color: #6b768a;
 }
 
 .main-form-header > nav > ul > .list-item > span {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 24px;
-	height: 24px;
-	border-radius: 4px;
-	background: #edf3ff;
-	margin-right: 5px;
-	color: #6b768a;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #edf3ff;
+  margin-right: 5px;
+  color: #6b768a;
 }
 
 .main-form-header > nav > ul > .list-item > span.highlight {
-	background-color: #003399;
-	color: #fff;
+  background-color: #003399;
+  color: #fff;
 }
 
 .list-item > button {
-	display: inline-flex;
-	width: 118px;
-	height: 32px;
-	padding: 4px 30px 4px 28px;
-	justify-content: center;
-	align-items: center;
-	margin-right: 20px;
-	color: #003399;
-	border-radius: 5px;
-	border: none;
+  display: inline-flex;
+  width: 118px;
+  height: 32px;
+  padding: 4px 30px 4px 28px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  color: #003399;
+  border-radius: 5px;
+  border: none;
 }
 
 .list-item > button.next-btn {
-	background-color: #003399;
-	color: #fff;
+  background-color: #003399;
+  color: #fff;
 }

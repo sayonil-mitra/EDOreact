@@ -164,10 +164,9 @@ const PlatformSetupForm = () => {
 	// 		)}
 	// 	</form>
 	// );
-	return (
-		<>
-			<div style={{ display: 'flex'}}>
-				<div style={{ width: '32%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
+	return (<>
+			<div style={{ width: '100%',display: 'flex'}}>
+				<div style={{width: '32%', borderRight:'1px solid #EAEAEA',height:'90vh'}}>
 					<AnalyticStyle />
 				</div>
 				<div style={{ width: '33%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
@@ -179,12 +178,51 @@ const PlatformSetupForm = () => {
 						
 				</div>
 			</div>
-		</>
-
-	)
-
-
-
+			{/* {credType === "USERNAME_PASSWORD" ? (
+				<>
+					<div className="input-container">
+						<label htmlFor="username" className="input-lable">
+							Username
+						</label>
+						<input
+							name="username"
+							id="username"
+							type="text"
+							className="form-control"
+							placeholder="Username"
+						/>
+					</div>
+					<div className="input-container">
+						<label htmlFor="password" className="input-lable">
+							Password
+						</label>
+						<input
+							name="password"
+							id="password"
+							type="text"
+							className="form-control"
+							placeholder="Password"
+						/>
+					</div>
+				</>
+			) : (
+				<>
+					<div className="input-container">
+						<label htmlFor="api-key" className="input-lable">
+							Api key
+						</label>
+						<input
+							name="apiKey"
+							id="api-key"
+							type="text"
+							className="form-control"
+							placeholder="api-key"
+						/>
+					</div>
+				</>
+			)} */}
+</>
+	);
 };
 
 export default PlatformSetupForm;

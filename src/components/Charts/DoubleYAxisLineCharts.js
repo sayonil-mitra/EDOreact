@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
-function DoubleYAxisLineCharts() {
+function DoubleYAxisLineCharts({ size }) {
   const colors = ["#5470C6", "#91CC75", "#EE6666"];
   const option = {
     title: {
@@ -108,7 +108,7 @@ function DoubleYAxisLineCharts() {
       },
     ],
   };
-  return <ReactEcharts option={option} />;
+  return <ReactEcharts option={option} opts={{ height: size }} />;
 }
 
 export default DoubleYAxisLineCharts;
