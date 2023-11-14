@@ -169,11 +169,13 @@ const PlatformSetupForm = () => {
 				<div style={{width: '32%', borderRight:'1px solid #EAEAEA',height:'90vh'}}>
 					<AnalyticStyle />
 				</div>
-				<div style={{ width: '34%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
-					<AnalyticQueries />
+				<div style={{ width: '33%',borderRight:'1px solid #EAEAEA',height:'90vh'}}>
+				<AnalyticParameters />
+					
 				</div>
 				<div style={{ width: '34%' }}>
-					<AnalyticParameters />
+				<AnalyticQueries />
+						
 				</div>
 			</div>
 			{/* {credType === "USERNAME_PASSWORD" ? (
