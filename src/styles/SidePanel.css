@@ -14,16 +14,22 @@
   font-family: "Poppins", sans-serif;
   font-family: "Varela Round", sans-serif;
   font-size: 24px; */
-  color: #26282C;
+  /* color: #26282C;
   font-family: Varela Round;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
-  margin-left: 20px;
-  margin-right: 10px;
-  margin-top: 20px;
-  /* margin-left: 10px; */
+  margin-right: 10px; */
+  margin-top: 15px;
+  color: #26282C;
+
+font-family: Varela Round;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+  
 }
 
 #integrationtext {
@@ -39,9 +45,12 @@
   width: 20%;
   max-width: 400px;
   min-height: 100%;
+  width: 358px;
+height: 984px;
+flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #eee;
 }
 
 .searchbar {
@@ -49,6 +58,14 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #dedede;
+  width: 325px;
+height: var(--height-h-10, 40px);
+
+flex-shrink: 0;
+
+flex-shrink: 0;
+margin-left: 32px;
+margin-right: 1px;
 }
 
 .searchbar img {
@@ -62,8 +79,11 @@
 
 .bqHeadingParent {
   display: flex;
-  width: 100%;
+  width: 340px;
+height: 44px;
+flex-shrink: 0;
   align-items: center;
+  margin-right: -5px;
 }
 
 .bqLogoParent {
@@ -79,11 +99,15 @@
   align-items: center;
   margin-top: 15px;
 }
+.bqHeadingNameParent::after{
+  color: ;
+}
 
 .bqApisNumberParent {
-  width: 10%;
+  width: auto;
   display: flex;
   align-items: center;
+  border-radius: 20%;
 }
 
 #bqApisNumber {
@@ -92,10 +116,12 @@
   justify-content: center;
   border-radius: 20%;
   height: 24px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  width: 24px;
+  background-color: #DFF7FF;
+
 
 }
+
 
 .bqLogsApiHeading {
   display: flex;
@@ -126,4 +152,19 @@
 
 .accordion-button {
   padding: 0px !important;
+}
+.accordion-button::after{
+  margin-left: -5px;
+}
+.accordion-item{
+  border: none;
+}
+.my-hr-line{
+  width: 309px;
+    height: 0px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #EEE;
+    margin: 0 22.5px 0 32.5px;
+    padding: 0;
 }
