@@ -154,10 +154,10 @@ flex-shrink: 0;
   padding: 0px !important;
 }
 .accordion-button::after{
-  margin-left: -5px;
+  margin-left: -5px !important;
 }
 .accordion-item{
-  border: none;
+  border: none !important;
 }
 .my-hr-line{
   width: 309px;

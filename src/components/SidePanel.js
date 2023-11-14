@@ -160,7 +160,7 @@ export default function SidePanel({ setdisplayIntegration }) {
                   </div>
                   <div className="bqApisNumberParent">
                     <div id="bqApisNumber" style={{
-                        backgroundColor: activeIntegration === integration.id ? "#eee" : "#DFF7FF"
+                        backgroundColor: activeIntegration === integration.id ? "#eee" : "#dff7ff"
                       }}>{integration.apis.length - 1}</div>
                   </div>
                 </div>
