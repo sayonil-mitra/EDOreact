@@ -21,6 +21,7 @@ function PlatformSetUp({ setGitUrl, setGitToken }) {
           15 Total APIs found
         </div>
       </div>
+      <br />
       <div className="platform-set-up-details-2">
         Platform Description <br />
         <textarea placeholder="Enter description" />
